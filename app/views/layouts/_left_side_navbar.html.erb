@@ -1,4 +1,4 @@
-<div class="navbar-default sidebar" role="navigation">
+<div class="col-md-3 navbar-default sidebar " role="navigation" xmlns="http://www.w3.org/1999/html">
 
   <div class="sidebar-nav navbar-collapse slimscrollsidebar">
     <div class="user-profile">
@@ -16,9 +16,7 @@
         </ul>
       </div>
     </div>
-
     <ul class="nav" id="side-menu">
-
       <li class="sidebar-search hidden-sm hidden-md hidden-lg">
         <!-- input-group -->
         <div class="input-group custom-search-form">
@@ -29,12 +27,9 @@
         <!-- /input-group -->
       </li>
       <li class="nav-small-cap m-t-10">--- Main Menu</li>
-      <li><a class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Issue 1</span></a></li>
-      <li><a  class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Issue 2</span></a></li>
-      <li><a  class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Issue 3</span></a></li>
-      <li><a  class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Issue 4</span></a></li>
-      <li><a  class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Issue 5</span></a></li>
-
+      <% @issues.each do |issue| %>
+          <%= link_to "#{truncate(issue.description,:length => 8, :separator => ' ')}",vendors_dashboard_path(issue),class:'waves-effect' %><br>
+        <% end %>
     </ul>
   </div>
 </div>
