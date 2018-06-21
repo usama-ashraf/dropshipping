@@ -28,7 +28,7 @@
       </li>
       <li class="nav-small-cap m-t-10">--- Main Menu</li>
       <% @issues.each do |issue| %>
-          <%= link_to "#{truncate(issue.description,:length => 8, :separator => ' ')}",vendors_dashboard_path(issue),class:'waves-effect' %><br>
+          <%= link_to "#{truncate(issue.description,:length => 10, :separator => ' ')}",vendors_dashboard_path(issue),class:'waves-effect' %><br>
         <% end %>
     </ul>
   </div>
