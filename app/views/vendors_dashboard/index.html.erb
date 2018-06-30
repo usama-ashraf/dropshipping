@@ -11,25 +11,25 @@
       <div class="col-lg-6 col-sm-6 col-xs-12">
         <div class="col-lg-6 col-sm-6 col-xs-12">
           <div class="white-box">
-            <h3 class="box-title">NEW CLIENTS</h3>
+            <h3 class="box-title">New Messages</h3>
             <ul class="list-inline two-part">
-              <li><i class="icon-people text-info"></i></li>
-              <li class="text-right"><span class="counter">23</span></li>
+              <li><i class="ti-email text-info"></i></li>
+              <li class="text-right"><span class="counter">20</span></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-6 col-sm-6 col-xs-12">
           <div class="white-box">
-            <h3 class="box-title">NEW Projects</h3>
+            <h3 class="box-title">Automate Replies Sent</h3>
             <ul class="list-inline two-part">
-              <li><i class="icon-folder text-purple"></i></li>
-              <li class="text-right"><span class="counter">169</span></li>
+              <li><i class="ti-email text-purple"></i></li>
+              <li class="text-right"><span class="counter">16</span></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-6 col-sm-6 col-xs-12">
           <div class="white-box">
-            <h3 class="box-title">Open Projects</h3>
+            <h3 class="box-title">Unread Messages</h3>
             <ul class="list-inline two-part">
               <li><i class="icon-folder-alt text-danger"></i></li>
               <li class="text-right"><span class="counter">311</span></li>
@@ -38,10 +38,10 @@
         </div>
         <div class="col-lg-6 col-sm-6 col-xs-12">
           <div class="white-box">
-            <h3 class="box-title">NEW Invoices</h3>
+            <h3 class="box-title">Refund Request</h3>
             <ul class="list-inline two-part">
               <li><i class="ti-wallet text-success"></i></li>
-              <li class="text-right"><span class="counter">117</span></li>
+              <li class="text-right"><span class="counter">11</span></li>
             </ul>
           </div>
         </div>
@@ -92,7 +92,8 @@
               <div class="list-group mail-list m-t-20">
                 Todays Disputes
                 <% @issues.each do |issue| %>
-                    <%= link_to "#{truncate(issue.description,:length => 10, :separator => ' ')}",vendors_dashboard_path(issue),class:"list-group-item active" %><br>
+                    <%= link_to "#{truncate(issue.description, :length => 10, :separator => ' ')}", vendors_dashboard_path(issue), class: "list-group-item active" %>
+                    <br>
                 <% end %>
               </div>
             </div>
@@ -101,29 +102,40 @@
                 <h4 class="font-bold m-t-0">Your message title goes here</h4>
                 <hr>
               </div>
-              <div class="container">
-                <p>Hello. How are you today?</p>
-                <span class="time-right">11:00</span>
+              <div class="over-flow p-10">
+                <div class="row p-10">
+                  <div class="chat col-lg-6 col-md-6 col-sm-6">
+                    <p>Hello. How are you today?</p>
+                    <span class="time-right">11:00</span>
+                  </div>
+                </div>
+                <div class="row p-10">
+                  <div class="mychat col-lg-6 col-md-6 col-sm-6" style="float:right;">
+                    <p>Hey! I'm fine. Thanks for asking!</p>
+                    <span class="time-left">11:01</span>
+                  </div>
+                </div>
+                <div class="row p-10">
+                  <div class="chat col-lg-6 col-md-6 col-sm-6">
+                    <p>Sweet! So, what do you wanna do today?</p>
+                    <span class="time-right">11:02</span>
+                  </div>
+                </div>
+                <div class="row p-10">
+                  <div class="mychat col-lg-6 col-md-6 col-sm-6" style="float:right;">
+                    <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+                    <span class="time-left">11:05</span>
+                  </div>
+                </div>
+                <hr>
               </div>
-
-              <div class="container darker">
-                <p>Hey! I'm fine. Thanks for asking!</p>
-                <span class="time-left">11:01</span>
-              </div>
-
-              <div class="container">
-                <p>Sweet! So, what do you wanna do today?</p>
-                <span class="time-right">11:02</span>
-              </div>
-
-              <div class="container darker">
-                <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-                <span class="time-left">11:05</span>
-              </div>
+              <div class="p-10"><a href="#" class="btn btn-default">Refund Preset</a>
+                <a href="#" class="btn btn-default"> Tracking Preset</a></div>
               <hr>
-              <hr>
-              <div class="b-all p-20">
-                <p class="p-b-20"> <a href="#" class="btn btn-default">Refund Preset</a> <a href="#" class="btn btn-default"> Tracking Preset</a></p>
+              <div class="form-group">
+                <div class="col-md-12">
+                  <textarea class="form-control" rows="5" placeholder="Your Text Goes Here.."></textarea>
+                </div>
               </div>
             </div>
           </div>
@@ -133,7 +145,6 @@
   </div>
   <!-- /.container-fluid -->
 </div>
-
 
 
 <script>

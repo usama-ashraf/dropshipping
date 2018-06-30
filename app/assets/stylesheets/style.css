@@ -1521,7 +1521,7 @@ table.dataTable thead .sorting:after {
 }
 .white-box {
     background: #ffffff;
-    padding: 25px;
+    padding: 20px;
     margin-bottom: 15px;
 }
 .white-box .box-title {
@@ -16846,6 +16846,22 @@ a.fc-event:not([href]):not([tabindex]) {
     height: 295px;
     overflow: scroll;
 }
+.chat{
+    background-color: antiquewhite;
+    border-radius: 9px;
+    padding: 15px;
+
+
+}
+.mychat{
+    float:right;
+    background-color: #03a9f347;
+    border-radius: 9px;
+    padding: 15px;
+
+
+}
+
 /*------Grid framwork------*/
 @media (min-width: 992px) {
     .col-md-1,
@@ -16863,4 +16879,7 @@ a.fc-event:not([href]):not([tabindex]) {
         float: left;
     }
 }
+
+
+
 /*Top bar header*/
