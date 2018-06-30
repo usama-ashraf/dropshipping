@@ -26,10 +26,10 @@
             </span> </div>
         <!-- /input-group -->
       </li>
-      <li class="nav-small-cap m-t-10">--- Main Menu</li>
-      <% @issues.each do |issue| %>
-          <%= link_to "#{truncate(issue.description,:length => 10, :separator => ' ')}",vendors_dashboard_path(issue),class:'waves-effect' %><br>
-        <% end %>
+      <li class="nav-small-cap m-t-10">--- Dashboard</li>
+      <li><%= link_to 'chat view', chat_view_vendors_dashboard_index_path,class:'waves-effect' %></li>
+      <li><%= link_to 'Automated Response',new_automated_response_path,class:'waves-effect'  %></li>
+      <li><%= link_to 'Presets',new_response_preset_path,class:'waves-effect'  %></li>
     </ul>
   </div>
 </div>

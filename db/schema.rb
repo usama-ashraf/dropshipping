@@ -10,10 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180620215246) do
+ActiveRecord::Schema.define(version: 20180629231514) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "automated_responses", force: :cascade do |t|
+    t.string "name_of_response"
+    t.string "subject"
+    t.text "response"
+    t.integer "vendor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "response_presets", force: :cascade do |t|
+    t.string "name"
+    t.integer "vendor_id"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "vendor_disputes", force: :cascade do |t|
     t.integer "vendor_id"

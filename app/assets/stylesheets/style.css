@@ -16841,6 +16841,11 @@ a.fc-event:not([href]):not([tabindex]) {
 .dataTables_wrapper label {
     display: inline-block;
 }
+
+.over-flow{
+    height: 295px;
+    overflow: scroll;
+}
 /*------Grid framwork------*/
 @media (min-width: 992px) {
     .col-md-1,
