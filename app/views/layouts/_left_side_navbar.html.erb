@@ -25,7 +25,7 @@
         <!-- /input-group -->
       </li>
       <li><%= link_to '--- Dashboard',vendors_dashboard_index_path %></li>
-      <li><%= link_to 'chat view', chat_view_vendors_dashboard_index_path,class:'waves-effect' %></li>
+      <li><%= link_to 'Disputes', vendors_dashboard_path(VendorDispute.last.id),class:'waves-effect' %></li>
       <li><%= link_to 'Automated Response',new_automated_response_path,class:'waves-effect'  %></li>
       <li><%= link_to 'Presets',new_response_preset_path,class:'waves-effect'  %></li>
     </ul>

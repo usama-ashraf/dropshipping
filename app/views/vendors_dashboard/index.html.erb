@@ -88,55 +88,23 @@
         <div class="white-box">
           <div class="row">
             <div class="col-lg-2 col-md-3  col-sm-4 col-xs-12 inbox-panel">
-
               <div class="list-group mail-list m-t-20">
                 Todays Disputes
-                <% @issues.each do |issue| %>
-                    <%= link_to "#{truncate(issue.description, :length => 10, :separator => ' ')}", vendors_dashboard_path(issue), class: "list-group-item active" %>
-                    <br>
-                <% end %>
+                <table id="issue-id">
+                  <% @issues.each do |issue| %>
+                      <tr class="list-group-item active make-request" data-href="<%= vendors_dashboard_path(issue) %>">
+                        <td class="p-10"><%= issue.first_name %></td>
+                        <td class="p-10"><%= issue.last_name %></td>
+                        <td class="p-10"><%= issue.order_number %></td>
+                      </tr>
+                  <% end %>
+                </table>
+                <br>
+
               </div>
             </div>
-            <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12 mail_listing">
-              <div class="media m-b-30 p-t-20">
-                <h4 class="font-bold m-t-0">Your message title goes here</h4>
-                <hr>
-              </div>
-              <div class="over-flow p-10">
-                <div class="row p-10">
-                  <div class="chat col-lg-6 col-md-6 col-sm-6">
-                    <p>Hello. How are you today?</p>
-                    <span class="time-right">11:00</span>
-                  </div>
-                </div>
-                <div class="row p-10">
-                  <div class="mychat col-lg-6 col-md-6 col-sm-6" style="float:right;">
-                    <p>Hey! I'm fine. Thanks for asking!</p>
-                    <span class="time-left">11:01</span>
-                  </div>
-                </div>
-                <div class="row p-10">
-                  <div class="chat col-lg-6 col-md-6 col-sm-6">
-                    <p>Sweet! So, what do you wanna do today?</p>
-                    <span class="time-right">11:02</span>
-                  </div>
-                </div>
-                <div class="row p-10">
-                  <div class="mychat col-lg-6 col-md-6 col-sm-6" style="float:right;">
-                    <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-                    <span class="time-left">11:05</span>
-                  </div>
-                </div>
-                <hr>
-              </div>
-              <div class="p-10"><a href="#" class="btn btn-default">Refund Preset</a>
-                <a href="#" class="btn btn-default"> Tracking Preset</a></div>
-              <hr>
-              <div class="form-group">
-                <div class="col-md-12">
-                  <textarea class="form-control" rows="5" placeholder="Your Text Goes Here.."></textarea>
-                </div>
-              </div>
+            <div class=" chatview col-lg-10 col-md-9 col-sm-8 col-xs-12 mail_listing">
+              <%= render 'chat_view' %>
             </div>
           </div>
         </div>
@@ -148,6 +116,14 @@
 
 
 <script>
+
+  $(document).on("click", ".btn-custom-class", function (e) {
+    e.preventDefault();
+    var value = jQuery(this).data("desc");
+    jQuery("#TextArea").text(value);
+  });
+
+
   function copyToClipboard(element) {
     var $temp = $("<input>");
     $("body").append($temp);
@@ -156,6 +132,15 @@
     document.execCommand("copy");
     $temp.remove();
   }
+
+  $(document).on("click", ".make-request", function (e) {
+    e.preventDefault();
+    var link = $(this).data("href");
+    $.ajax({
+      url: link,
+      type: "GET"
+    });
+  });
 
 
 </script>

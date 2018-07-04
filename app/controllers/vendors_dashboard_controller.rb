@@ -11,18 +11,20 @@ class VendorsDashboardController < ApplicationController
   end
   
   def index
+    @dispute=VendorDispute.find_by_id(VendorDispute.first.id)
     @issues=VendorDispute.where(vendor_id:current_vendor.id)
-    
+    @presets=ResponsePreset.all.where(vendor_id:current_vendor.id)
+
+
   end
   def show
     @issues=VendorDispute.where(vendor_id:current_vendor.id)
-  
+    @presets=ResponsePreset.all.where(vendor_id:current_vendor.id)
     @dispute=VendorDispute.find_by_id(params[:id])
+    respond_to do |format|
+      format.js
+      format.html
+    end
+    
   end
-  def chat_view
-    @issues=VendorDispute.where(vendor_id:current_vendor.id)
-
-
-  end
-  
 end

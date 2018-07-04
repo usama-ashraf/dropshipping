@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   resources :vendors_dashboard, only: [:index,:show] do
     collection do
       post :customer_issues
-      get :chat_view
     end
   end
   
