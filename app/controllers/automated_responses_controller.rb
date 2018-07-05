@@ -33,7 +33,7 @@ class AutomatedResponsesController < ApplicationController
   
   private
    def response_params
-     params.require(:automated_response).permit(:name_of_response, :subject, :response, :vendor_id)
+     params.require(:automated_response).permit(:name_of_response,:trigger, :subject, :response, :vendor_id)
 
    end
   
