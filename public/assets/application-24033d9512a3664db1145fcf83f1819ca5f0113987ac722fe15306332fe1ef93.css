@@ -13938,7 +13938,7 @@ table.dataTable thead .sorting:after {
 /* line 1522, /home/ferhan/client/dropshipping/app/assets/stylesheets/style.css */
 .white-box {
   background: #ffffff;
-  padding: 25px;
+  padding: 20px;
   margin-bottom: 15px;
 }
 
@@ -37100,9 +37100,30 @@ a.fc-event:not([href]):not([tabindex]) {
   display: inline-block;
 }
 
+/* line 16845, /home/ferhan/client/dropshipping/app/assets/stylesheets/style.css */
+.over-flow {
+  height: 295px;
+  overflow: scroll;
+}
+
+/* line 16849, /home/ferhan/client/dropshipping/app/assets/stylesheets/style.css */
+.chat {
+  background-color: antiquewhite;
+  border-radius: 9px;
+  padding: 15px;
+}
+
+/* line 16856, /home/ferhan/client/dropshipping/app/assets/stylesheets/style.css */
+.mychat {
+  float: right;
+  background-color: #03a9f347;
+  border-radius: 9px;
+  padding: 15px;
+}
+
 /*------Grid framwork------*/
 @media (min-width: 992px) {
-  /* line 16846, /home/ferhan/client/dropshipping/app/assets/stylesheets/style.css */
+  /* line 16867, /home/ferhan/client/dropshipping/app/assets/stylesheets/style.css */
   .col-md-1,
   .col-md-10,
   .col-md-11,
