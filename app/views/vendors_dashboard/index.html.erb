@@ -93,9 +93,9 @@
                 <table id="issue-id">
                   <% @issues.each do |issue| %>
                       <tr class="list-group-item active make-request" data-href="<%= vendors_dashboard_path(issue) %>">
-                        <td class="p-10"><%= issue.first_name %></td>
-                        <td class="p-10"><%= issue.last_name %></td>
-                        <td class="p-10"><%= issue.order_number %></td>
+                        <td class="p-3"><%= issue.first_name %></td>
+                        <td class="p-3"><%= issue.last_name %></td>
+                        <td class="p-3"><%= issue.order_number %></td>
                       </tr>
                   <% end %>
                 </table>

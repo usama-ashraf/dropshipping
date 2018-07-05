@@ -17,7 +17,7 @@
                 <table id="issue-id">
                   <% @issues.each do |issue| %>
                       <tr class="list-group-item active make-request" data-href="<%= vendors_dashboard_path(issue) %>">
-                        <td class="p-10"><%= issue.first_name %></td>
+                        <td class=""><%= issue.first_name %></td>
                         <td class="p-10"><%= issue.last_name %></td>
                         <td class="p-10"><%= issue.order_number %></td>
                       </tr>
@@ -25,7 +25,7 @@
                 </table>
               </div>
             </div>
-            <div class=" chatview col-lg-10 col-md-9 col-sm-8 col-xs-12 mail_listing">
+            <div class="chatview col-lg-10 col-md-9 col-sm-8 col-xs-12 mail_listing">
               <%= render 'chat_view' %>
             </div>
           </div>

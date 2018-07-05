@@ -16862,6 +16862,9 @@ a.fc-event:not([href]):not([tabindex]) {
 
 }
 
+.p-3{
+    padding: 3px;
+}
 /*------Grid framwork------*/
 @media (min-width: 992px) {
     .col-md-1,

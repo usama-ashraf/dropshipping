@@ -37121,9 +37121,14 @@ a.fc-event:not([href]):not([tabindex]) {
   padding: 15px;
 }
 
+/* line 16865, /home/ferhan/client/dropshipping/app/assets/stylesheets/style.css */
+.p-3 {
+  padding: 3px;
+}
+
 /*------Grid framwork------*/
 @media (min-width: 992px) {
-  /* line 16867, /home/ferhan/client/dropshipping/app/assets/stylesheets/style.css */
+  /* line 16870, /home/ferhan/client/dropshipping/app/assets/stylesheets/style.css */
   .col-md-1,
   .col-md-10,
   .col-md-11,
